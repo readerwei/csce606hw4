@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.2.2'
-gem 'rails', '3.2.18'
+gem 'rails', '3.2.22'
 
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
