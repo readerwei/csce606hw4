@@ -3,12 +3,15 @@ source 'https://rubygems.org'
 ruby '2.2.2'
 gem 'rails', '3.2.18'
 
+
+# See https://github.com/rails/execjs#readme for more supported runtimes
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
   gem 'sqlite3'
+  gem 'test-unit'
   gem 'byebug'
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
