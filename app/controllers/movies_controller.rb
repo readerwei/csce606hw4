@@ -47,6 +47,7 @@ class MoviesController < ApplicationController
   end
 
   def edit
+    #debugger
     @movie = Movie.find params[:id]
   end
 
@@ -58,11 +59,16 @@ class MoviesController < ApplicationController
   end
   
   def samedirector
-    id = params[:id] # retrieve movie ID from URI route
-    @movies = Movie.find(id) # look up movie by unique ID
-    
-    #@director = params[:director]
-    #@movies = Movie.find_by_director(@director)
+    #debugger
+    id = params[:movie_id] # retrieve movie ID from URI route
+    movie = Movie.find(id) # look up movie by unique ID
+    @director = movie.director
+    if @director == ""
+      flash[:notice] = "'#{movie.title}' has no director info."
+      redirect_to movies_path
+    else
+      @movies = Movie.find_all_by_director(@director)
+    end
   end
 
   def destroy
