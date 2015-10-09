@@ -3983,3 +3983,52 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/jquery.js?body=1" for 165.91.12.74 at 2015-10-09 03:48:55 +0000
 Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/movies/4" for 165.91.12.74 at 2015-10-09 04:01:14 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered movies/show.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 13.7ms (Views: 11.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 165.91.12.74 at 2015-10-09 04:01:14 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 165.91.12.74 at 2015-10-09 04:01:14 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 165.91.12.74 at 2015-10-09 04:01:14 +0000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 165.91.12.74 at 2015-10-09 04:01:14 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/movies/4/samedirector" for 165.91.12.74 at 2015-10-09 04:01:15 +0000
+Processing by MoviesController#samedirector as HTML
+  Parameters: {"movie_id"=>"4"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = 'Wei'
+  Rendered movies/samedirector.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 14.4ms (Views: 11.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 165.91.12.74 at 2015-10-09 04:01:15 +0000
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 165.91.12.74 at 2015-10-09 04:01:15 +0000
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 165.91.12.74 at 2015-10-09 04:01:15 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 165.91.12.74 at 2015-10-09 04:01:15 +0000
+Served asset /application.js - 304 Not Modified (1ms)
